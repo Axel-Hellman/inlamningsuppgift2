@@ -9,7 +9,7 @@ public class SheetPanel extends BorderPanel {
     public SheetPanel(int rows, int columns, CurrentCell currentCell, Sheet sheet, StatusLabel statusLabel) {
         add(WEST, new RowLabels(rows));
         slotLabels = new SlotLabels(rows, columns, currentCell, sheet, statusLabel);
-        add(CENTER, new SlotLabels(rows, columns));
+        add(CENTER, slotLabels);
         sheet.addSlotLabels(slotLabels);
     }
 }
