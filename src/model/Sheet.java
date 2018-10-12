@@ -85,19 +85,40 @@ public class Sheet extends Observable implements Environment {
 	}
 
 	public void updateSheet() {
-
+		setChanged();
+		notifyObservers();
 	}
 
-	public void putCell(String name, String text) {
-
+	public void putCell(String name, String cellText) {
+		Cell cell = factory.cell(cellText);
+		checkBomb(name,cell);
+		sheet.put(name, cell);
+		updateSheet();
 	}
 
 	public void load(HashMap<String, Cell> newSheet) {
-
+		HashMap<String, Cell> prevSheet = sheet;
+		sheet = newSheet;
+		try {
+			for (Entry<String, Cell> entry : sheet.entrySet()){
+				checkBomb(entry.getKey(), entry.getValue());
+			}
+		} catch (XLException e){
+			sheet = prevSheet;
+			throw e;
+		}
+		updateSheet();
 	}
 
-	private void checkLoop(String name, Cell cell) {
-
+	private void checkBomb(String name, Cell cell) {
+		Cell prevCell = sheet.get(name);
+		Cell bombCell = new Bomb();
+		sheet.put(name, bombCell);
+		try {
+			cell.getValue(this);
+		} finally {
+			sheet.put(name, prevCell);
+		}
 	}
 
 	public void addSlotLabels(SlotLabels slotLabels) {
