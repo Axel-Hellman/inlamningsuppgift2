@@ -1,13 +1,13 @@
 # GruppInfo
 
-Inlämningsuppgift2 i kursen Objektorienterad Modulering och Design (EDAF60) på LTH.  
+InlÃ¤mningsuppgift2 i kursen Objektorienterad Modulering och Design (EDAF60) pÃ¥ LTH.  
 
 Gruppmedlemmar:
 
 Joakim Rudberg (dic15jru)
 
-Johannes Törnblom (dic15jto)
+Johannes TÃ¶rnblom (dic15jto)
 
-Sandra Nyström (sa1741ny-s)
+Sandra NystrÃ¶m (sa1741ny-s)
 
 Axel Hellman (dic15ahe)
