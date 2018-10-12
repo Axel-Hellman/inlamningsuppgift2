@@ -69,7 +69,7 @@ public class Sheet extends Observable implements Environment {
 	}
 
 	public Set<Entry<String, Cell>> EntrySet() {
-		return null;
+		return sheet.entrySet();
 	}
 
 	public int size() {
@@ -77,7 +77,7 @@ public class Sheet extends Observable implements Environment {
 	}
 
 	public void removeCell(String key) {
-
+		
 	}
 
 	public void clearAll() {
