@@ -37,6 +37,10 @@ public class Sheet extends Observable implements Environment {
 
 		return cell.getValue(this);
 	}
+	
+	public Set<Entry<String, Cell>> entrySet(){
+		return sheet.entrySet();
+	}
 
 	public Cell getCell(String key) {
 		return sheet.get(key);
