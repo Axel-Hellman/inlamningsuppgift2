@@ -56,7 +56,7 @@ public class Sheet extends Observable implements Environment {
 
 	public String getStringValue(String key) {
 		Cell c = getCell(key);
-		if(c == null) {
+		if (c == null) {
 			return "";
 		}
 
@@ -68,13 +68,12 @@ public class Sheet extends Observable implements Environment {
 		updateSheet();
 	}
 
-	// Vet inte vad detta är, förklara.
-	// public Set<Entry<String, Slot>> EntrySet(){
-	//
-	// }
+	public Set<Entry<String, Cell>> EntrySet() {
+		return null;
+	}
 
 	public int size() {
-		return 0;
+		return sheet.size();
 	}
 
 	public void removeCell(String key) {
@@ -92,7 +91,7 @@ public class Sheet extends Observable implements Environment {
 
 	public void putCell(String name, String cellText) {
 		Cell cell = factory.cell(cellText);
-		checkBomb(name,cell);
+		checkBomb(name, cell);
 		sheet.put(name, cell);
 		updateSheet();
 	}
@@ -101,10 +100,10 @@ public class Sheet extends Observable implements Environment {
 		HashMap<String, Cell> prevSheet = sheet;
 		sheet = newSheet;
 		try {
-			for (Entry<String, Cell> entry : sheet.entrySet()){
+			for (Entry<String, Cell> entry : sheet.entrySet()) {
 				checkBomb(entry.getKey(), entry.getValue());
 			}
-		} catch (XLException e){
+		} catch (XLException e) {
 			sheet = prevSheet;
 			throw e;
 		}
