@@ -29,12 +29,10 @@ public class Sheet extends Observable implements Environment {
 
 	@Override
 	public double value(String name) {
-
 		Cell cell = sheet.get(name);
 		if (cell == null) {
 			throw new XLException("Error: " + name + " is empty");
 		}
-
 		return cell.getValue(this);
 	}
 	
@@ -47,7 +45,6 @@ public class Sheet extends Observable implements Environment {
 	}
 
 	public String getCellValue(String key) {
-
 		Cell c = getCell(key);
 		if (c == null) {
 			return "";
@@ -67,7 +64,6 @@ public class Sheet extends Observable implements Environment {
 		if (c == null) {
 			return "";
 		}
-
 		return c.toString(this);
 	}
 
