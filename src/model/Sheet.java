@@ -7,6 +7,7 @@ import java.util.Set;
 
 import expr.Environment;
 import gui.SlotLabels;
+import util.XLException;
 
 public class Sheet extends Observable implements Environment {
 
@@ -29,10 +30,11 @@ public class Sheet extends Observable implements Environment {
 	public double value(String name) {
 
 		Cell cell = sheet.get(name);
-		
-		
-		
-		return 0;
+		if (cell == null) {
+			throw new XLException("Error: " + name + " is empty");
+		}
+
+		return cell.getValue(this);
 	}
 
 	public Cell getCell(String key) {
