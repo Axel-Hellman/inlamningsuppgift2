@@ -6,6 +6,7 @@ import java.util.Observable;
 import java.util.Set;
 
 import expr.Environment;
+import gui.SlotLabel;
 import gui.SlotLabels;
 import util.XLException;
 
@@ -77,7 +78,7 @@ public class Sheet extends Observable implements Environment {
 	}
 
 	public void removeCell(String key) {
-		
+
 	}
 
 	public void clearAll() {
@@ -122,10 +123,12 @@ public class Sheet extends Observable implements Environment {
 	}
 
 	public void addSlotLabels(SlotLabels slotLabels) {
-
+		this.slotLabels = slotLabels;
 	}
 
 	public void updateSlotLabels() {
-
+		// for(SlotLabel s : slotLabels.getList()) {
+		//
+		// }
 	}
 }
