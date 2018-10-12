@@ -2,11 +2,13 @@ package model;
 
 import expr.Environment;
 
+// Done
+
 public class CommentCell implements Cell {
 	private String string;
 	
 	public CommentCell(String cellString){
-		this.string = cellString;
+		string = cellString;
 	}
 	
 	@Override
