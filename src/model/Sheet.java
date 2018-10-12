@@ -38,11 +38,20 @@ public class Sheet extends Observable implements Environment {
 	}
 
 	public Cell getCell(String key) {
-		return null;
+		return sheet.get(key);
 	}
 
 	public String getCellValue(String key) {
-		return null;
+
+		Cell c = sheet.get(key);
+		if (c == null) {
+			return "";
+		} else if (c instanceof CommentCell) {
+			return c.getComment();
+		}
+
+		return String.valueOf(getCell(key).getValue(this)); // getValue returns a double - thereby the use of
+															// String.valueOf
 	}
 
 	public String getStringValue() {
