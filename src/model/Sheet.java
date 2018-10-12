@@ -64,7 +64,8 @@ public class Sheet extends Observable implements Environment {
 	}
 
 	public void put(String string, Cell cell) {
-
+		sheet.put(string, cell);
+		updateSheet();
 	}
 
 	// Vet inte vad detta är, förklara.
