@@ -51,7 +51,10 @@ public class Sheet extends Observable implements Environment {
 			return c.getComment();
 		}
 
-		return String.valueOf(getCell(key).getValue(this)); // getValue returns a double - thereby the use of
+		return String.valueOf(getCell(key).getValue(this)); // getValue returns
+															// a double -
+															// thereby the use
+															// of
 															// String.valueOf
 	}
 
@@ -82,12 +85,12 @@ public class Sheet extends Observable implements Environment {
 		Cell bombCell = new Bomb();
 		sheet.put(key, bombCell);
 		try {
-			for (Cell c : sheet.values()){
-				if (c != bombCell){
+			for (Cell c : sheet.values()) {
+				if (c != bombCell) {
 					c.getValue(this);
 				}
 			}
-		} catch (XLException e){
+		} catch (XLException e) {
 			sheet.put(key, cell);
 			throw new XLException("Cannot remove cell " + key);
 		}
@@ -97,7 +100,7 @@ public class Sheet extends Observable implements Environment {
 
 	public void clearAll() {
 		sheet = new HashMap<String, Cell>();
-		// slotLabels.clearAll();
+		slotLabels.clearAll();
 		updateSheet();
 	}
 
@@ -143,8 +146,8 @@ public class Sheet extends Observable implements Environment {
 	}
 
 	public void updateSlotLabels() {
-		// for(SlotLabel s : slotLabels.getList()) {
-		//
-		// }
+		for (SlotLabel s : slotLabels.getList()) {
+			s.updateText();
+		}
 	}
 }
