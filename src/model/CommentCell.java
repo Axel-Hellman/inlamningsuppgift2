@@ -12,7 +12,7 @@ public class CommentCell implements Cell {
 	}
 	
 	@Override
-	public double value(Environment env) {
+	public double getValue(Environment env) {
 		return 0;
 	}
 	

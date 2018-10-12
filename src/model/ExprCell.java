@@ -12,7 +12,7 @@ public class ExprCell implements Cell {
 		expr = cellExpr;
 	}
 	@Override
-	public double value(Environment env) {
+	public double getValue(Environment env) {
 		return expr.value(env);
 	}
 

@@ -5,7 +5,7 @@ import expr.Environment;
 
 public interface Cell {
 
-	public abstract double value(Environment env);
+	public abstract double getValue(Environment env);
 	
 	public String getComment();
 	

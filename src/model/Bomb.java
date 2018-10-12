@@ -6,7 +6,7 @@ import util.XLException;
 public class Bomb implements Cell {
 
 	@Override
-	public double value(Environment env) { // BOOOOOOOOOM!!!
+	public double getValue(Environment env) { // BOOOOOOOOOM!!!
 		throw new XLException("KABOOM! (Bomb Error)");
 	}
 
