@@ -78,11 +78,27 @@ public class Sheet extends Observable implements Environment {
 	}
 
 	public void removeCell(String key) {
-
+		Cell cell = sheet.get(key);
+		Cell bombCell = new Bomb();
+		sheet.put(key, bombCell);
+		try {
+			for (Cell c : sheet.values()){
+				if (c != bombCell){
+					c.getValue(this);
+				}
+			}
+		} catch (XLException e){
+			sheet.put(key, cell);
+			throw new XLException("Cannot remove cell " + key);
+		}
+		sheet.remove(key);
+		updateSheet();
 	}
 
 	public void clearAll() {
-
+		sheet = new HashMap<String, Cell>();
+		// slotLabels.clearAll();
+		updateSheet();
 	}
 
 	public void updateSheet() {
