@@ -40,11 +40,10 @@ public class Sheet extends Observable implements Environment {
 	public Cell getCell(String key) {
 		return sheet.get(key);
 	}
-	
 
 	public String getCellValue(String key) {
 
-		Cell c = sheet.get(key);
+		Cell c = getCell(key);
 		if (c == null) {
 			return "";
 		} else if (c instanceof CommentCell) {
@@ -55,8 +54,13 @@ public class Sheet extends Observable implements Environment {
 															// String.valueOf
 	}
 
-	public String getStringValue() {
-		return null;
+	public String getStringValue(String key) {
+		Cell c = getCell(key);
+		if(c == null) {
+			return "";
+		}
+
+		return c.toString(this);
 	}
 
 	public void put(String string, Cell cell) {
