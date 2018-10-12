@@ -4,6 +4,8 @@ import static java.awt.BorderLayout.CENTER;
 import static java.awt.BorderLayout.NORTH;
 import static java.awt.BorderLayout.SOUTH;
 import gui.menu.XLMenuBar;
+import model.Sheet;
+
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.print.PageFormat;
@@ -28,9 +30,10 @@ public class XL extends JFrame implements Printable {
         xlList.add(this);
         counter.increment();
         CurrentCell currentCell = new CurrentCell();
+        Sheet sheet = new Sheet();
         JPanel statusPanel = new StatusPanel(statusLabel, currentCell);
-        JPanel sheetPanel = new SheetPanel(ROWS, COLUMNS);
-        Editor editor = new Editor();
+        JPanel sheetPanel = new SheetPanel(ROWS, COLUMNS, currentCell, sheet, statusLabel);
+        Editor editor = new Editor(currentCell, statusLabel, sheet);
         add(NORTH, statusPanel);
         add(CENTER, editor);
         add(SOUTH, sheetPanel);
