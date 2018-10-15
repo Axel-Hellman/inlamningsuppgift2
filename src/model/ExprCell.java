@@ -17,10 +17,12 @@ public class ExprCell implements Cell {
 		return expr.value(env);
 	}
 
+	@Override
 	public String getComment() {
 		return null;
 	}
 
+	@Override
 	public String toString(Environment e) {
 		return expr.toString();
 	}

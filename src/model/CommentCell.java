@@ -16,10 +16,12 @@ public class CommentCell implements Cell {
 		return 0;
 	}
 
+	@Override
 	public String getComment() {
 		return string;
 	}
-
+	
+	@Override
 	public String toString(Environment e) {
 		return string;
 	}
