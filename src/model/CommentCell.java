@@ -8,7 +8,7 @@ public class CommentCell implements Cell {
 	private String string;
 	
 	public CommentCell(String cellString){
-		string = cellString;
+		string = cellString.substring(1);
 	}
 	
 	@Override
