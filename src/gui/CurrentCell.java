@@ -3,28 +3,29 @@ package gui;
 import java.awt.Color;
 import java.util.Observable;
 
-public class CurrentCell extends Observable{
+public class CurrentCell extends Observable {
 	private SlotLabel currentCell;
-	
-	public CurrentCell(){
-		
-	}
-	
-	public String getName(){
+
+	public String getName() {
 		return currentCell.getName();
 	}
-	
-	public void set(SlotLabel slotLabel){
+
+	public void set(SlotLabel slotLabel) {
 		currentCell = slotLabel;
 		setChanged();
 		notifyObservers();
+		addObserver(slotLabel);
 	}
-	
-	public void setWhite(){
+
+	public void setWhite() {
 		currentCell.setBackground(Color.WHITE);
 	}
-	
-	public void clearSlot(){
+
+	public void clearSlot() {
 		currentCell.setText("");
+	}
+
+	public String toString() {
+		return currentCell.toString();
 	}
 }
