@@ -6,7 +6,7 @@ import expr.Environment;
 
 public interface Cell {
 
-	public abstract double getValue(Environment env);
+	public double getValue(Environment env);
 
 	public String toString(Environment env);
 

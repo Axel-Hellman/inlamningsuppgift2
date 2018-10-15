@@ -7,7 +7,6 @@ public class CurrentCell {
 
 	public void setCurrentCell(String address){
 		this.address = address;
-		// cell = Sheet.getCell(address);
 	}
 	
 	public Cell getCell(){
