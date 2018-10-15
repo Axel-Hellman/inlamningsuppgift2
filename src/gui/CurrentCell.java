@@ -5,7 +5,11 @@ import java.util.Observable;
 
 public class CurrentCell extends Observable {
 	private SlotLabel currentCell;
-
+	
+	public CurrentCell(){
+		
+	}
+	
 	public String getName() {
 		return currentCell.getName();
 	}
@@ -14,7 +18,7 @@ public class CurrentCell extends Observable {
 		currentCell = slotLabel;
 		setChanged();
 		notifyObservers();
-		addObserver(slotLabel);
+		// addObserver(slotLabel);
 	}
 
 	public void setWhite() {
@@ -23,9 +27,5 @@ public class CurrentCell extends Observable {
 
 	public void clearSlot() {
 		currentCell.setText("");
-	}
-
-	public String toString() {
-		return currentCell.toString();
 	}
 }

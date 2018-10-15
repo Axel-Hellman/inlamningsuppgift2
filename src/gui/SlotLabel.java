@@ -52,19 +52,19 @@ public class SlotLabel extends ColoredLabel implements Observer, MouseListener {
 		System.out.println(currentCell.getName());
 	}
 
-	// Not used
+	@Override
 	public void mousePressed(MouseEvent e) {
 	}
 
-	// Not used
+	@Override
 	public void mouseReleased(MouseEvent e) {
 	}
 
-	// Not used
+	@Override
 	public void mouseEntered(MouseEvent e) {
 	}
 
-	// Not used
+	@Override
 	public void mouseExited(MouseEvent e) {
 	}
 }

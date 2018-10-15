@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.SwingConstants;
 
-import com.sun.xml.internal.bind.v2.runtime.Name;
 
 import model.Sheet;
 
@@ -15,9 +14,9 @@ public class SlotLabels extends GridPanel {
 	private Sheet sheet;
 	private StatusLabel statusLabel;
 
-	public SlotLabels(int rows, int cols, CurrentCell currentSlot, Sheet sheet, StatusLabel statusLabel) {
+	public SlotLabels(int rows, int cols, CurrentCell currentCell, Sheet sheet, StatusLabel statusLabel) {
 		super(rows + 1, cols);
-		this.currentCell = currentSlot;
+		this.currentCell = currentCell;
 		this.sheet = sheet;
 		this.statusLabel = statusLabel;
 
@@ -29,7 +28,7 @@ public class SlotLabels extends GridPanel {
 		for (int row = 1; row <= rows; row++) {
 			for (char ch = 'A'; ch < 'A' + cols; ch++) {
 				String name = ch + String.valueOf(row);
-				SlotLabel label = new SlotLabel(name, currentSlot, sheet, statusLabel);
+				SlotLabel label = new SlotLabel(name, currentCell, sheet, statusLabel);
 				add(label);
 				labelList.add(label);
 			}

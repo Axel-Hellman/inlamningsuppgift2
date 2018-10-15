@@ -33,20 +33,20 @@ public class Editor extends JTextField implements ActionListener, Observer {
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		// statusLabel.clear();
+	public void actionPerformed(ActionEvent arg0) {
+		statusLabel.clear();
 		String key = currentCell.getName();
 		if (getText().equals("")) {
 			try {
 				sheet.removeCell(key);
-			} catch (XLException e1) {
-				statusLabel.setText(e1.getMessage());
+			} catch (XLException e) {
+				statusLabel.setText(e.getMessage());
 			}
 		} else {
 			try {
 				sheet.putCell(key, getText());
-			} catch (XLException e2) {
-				statusLabel.setText(e2.getMessage());
+			} catch (XLException e) {
+				statusLabel.setText(e.getMessage());
 			}
 		}
 	}

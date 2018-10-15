@@ -13,8 +13,8 @@ public class ExprCell implements Cell {
 	}
 
 	@Override
-	public double getValue(Environment env) {
-		return expr.value(env);
+	public double getValue(Environment e) {
+		return expr.value(e);
 	}
 
 	@Override
