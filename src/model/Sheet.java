@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Observable;
 import java.util.Set;
-
 import expr.Environment;
 import gui.SlotLabel;
 import gui.SlotLabels;
@@ -35,10 +34,6 @@ public class Sheet extends Observable implements Environment {
 		}
 		return cell.getValue(this);
 	}
-	
-	public Set<Entry<String, Cell>> entrySet(){
-		return sheet.entrySet();
-	}
 
 	public Cell getCell(String key) {
 		return sheet.get(key);
@@ -52,11 +47,7 @@ public class Sheet extends Observable implements Environment {
 			return c.getComment();
 		}
 
-		return String.valueOf(getCell(key).getValue(this)); // getValue returns
-															// a double -
-															// thereby the use
-															// of
-															// String.valueOf
+		return String.valueOf(getCell(key).getValue(this));
 	}
 
 	public String getStringValue(String key) {
@@ -72,7 +63,7 @@ public class Sheet extends Observable implements Environment {
 		updateSheet();
 	}
 
-	public Set<Entry<String, Cell>> EntrySet() {
+	public Set<Entry<String, Cell>> entrySet() {
 		return sheet.entrySet();
 	}
 
