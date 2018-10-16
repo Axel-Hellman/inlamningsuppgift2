@@ -15,11 +15,5 @@ public class Bomb implements Cell {
 	public String getStringValue(Environment env){
 		return null;
 	}
-
-	@Override
-	public String toString() {
-		return null;
-	}
-
 }
  
