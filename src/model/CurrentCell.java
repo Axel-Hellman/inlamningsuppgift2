@@ -16,6 +16,5 @@ public class CurrentCell {
 	
 	public String getAddress(){
 		return address;
-	}
-	
+	}	
 }
