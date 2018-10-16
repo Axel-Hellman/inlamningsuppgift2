@@ -12,9 +12,9 @@ import model.Sheet;
 import util.XLException;
 
 public class Editor extends JTextField implements ActionListener, Observer {
-    Sheet sheet;
-    StatusLabel statusLabel;
-    CurrentCell currentCell;
+    private Sheet sheet;
+    private StatusLabel statusLabel;
+    private CurrentCell currentCell;
 
     public Editor(CurrentCell currentCell, StatusLabel statusLabel, Sheet sheet) {
         setBackground(Color.WHITE);
