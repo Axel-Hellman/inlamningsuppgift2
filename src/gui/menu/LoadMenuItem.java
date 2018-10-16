@@ -12,8 +12,8 @@ import java.util.HashMap;
 import javax.swing.JFileChooser;
 
 class LoadMenuItem extends OpenMenuItem {
-	private Sheet sheet;
- 
+    private Sheet sheet;
+
     public LoadMenuItem(XL xl, StatusLabel statusLabel, Sheet sheet) {
         super(xl, statusLabel, "Load");
         this.sheet = sheet;
@@ -22,15 +22,15 @@ class LoadMenuItem extends OpenMenuItem {
     protected void action(String path) throws FileNotFoundException {
         statusLabel.clear();
         try {
-        	XLBufferedReader XLbr = new XLBufferedReader(path);
-        	HashMap<String, Cell> temp = new HashMap<String, Cell>();
-        	XLbr.load(temp);
-        	System.out.println(temp.size());
-        	sheet.clearAll();
-        	sheet.load(temp);
-        	sheet.updateSlotLabels();
+            XLBufferedReader XLbr = new XLBufferedReader(path);
+            HashMap<String, Cell> temp = new HashMap<String, Cell>();
+            XLbr.load(temp);
+            System.out.println(temp.size());
+            sheet.clearAll();
+            sheet.load(temp);
+            sheet.updateSlotLabels();
         } catch(Exception e) {
-        	statusLabel.setText(e.getMessage());
+            statusLabel.setText(e.getMessage());
         }
     }
 

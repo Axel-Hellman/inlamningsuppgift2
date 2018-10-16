@@ -5,12 +5,12 @@ import util.XLException;
 
 public class Bomb implements Cell {
 
-	@Override
-	public double getValue(Environment env) { // BOOOOOOOOOM!!!
-		throw new XLException("KABOOM! (Bomb Error)");
-	}
+    @Override
+    public double getValue(Environment env) { // BOOOOOOOOOM!!!
+        throw new XLException("KABOOM! (Bomb Error)");
+    }
 
-	public String getStringValue(Environment env){
-		return null;
-	}
+    public String getStringValue(Environment env){
+        return null;
+    }
 }

@@ -6,9 +6,9 @@ import static java.awt.BorderLayout.WEST;
 import model.Sheet;
 
 public class SheetPanel extends BorderPanel {
-	
-	private SlotLabels slotLabels;
-	
+
+    private SlotLabels slotLabels;
+
     public SheetPanel(int rows, int columns, CurrentCell currentCell, Sheet sheet, StatusLabel statusLabel) {
         add(WEST, new RowLabels(rows));
         slotLabels = new SlotLabels(rows, columns, currentCell, sheet, statusLabel);

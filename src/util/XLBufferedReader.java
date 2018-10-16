@@ -9,9 +9,8 @@ import model.Cell;
 
 //TODO move to another package
 public class XLBufferedReader extends BufferedReader {
-	
-	private Factory factory = new Factory();
-	
+    private Factory factory = new Factory();
+
     public XLBufferedReader(String name) throws FileNotFoundException {
         super(new FileReader(name));
     }

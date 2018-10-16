@@ -7,7 +7,6 @@ import java.util.Set;
 
 import model.Cell;
 
-//TODO move to another package
 public class XLPrintStream extends PrintStream {
     public XLPrintStream(String fileName) throws FileNotFoundException {
         super(fileName);
