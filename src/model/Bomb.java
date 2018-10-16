@@ -12,8 +12,7 @@ public class Bomb implements Cell {
 		throw new XLException("KABOOM! (Bomb Error)");
 	}
 
-	@Override
-	public String getComment() {
+	public String getStringValue(Environment env){
 		return null;
 	}
 

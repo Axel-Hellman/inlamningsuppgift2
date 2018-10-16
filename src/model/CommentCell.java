@@ -16,9 +16,8 @@ public class CommentCell implements Cell {
 	public double getValue(Environment env) {
 		return 0;
 	}
-
-	@Override
-	public String getComment() {
+	
+	public String getStringValue(Environment env){
 		return string;
 	}
 

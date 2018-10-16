@@ -48,15 +48,8 @@ public class Sheet extends Observable implements Environment {
 		Cell c = getCell(key);
 		if (c == null) {
 			return "";
-		} else if (c instanceof CommentCell) {
-			return c.getComment();
 		}
-
-		return String.valueOf(getCell(key).getValue(this)); // getValue returns
-															// a double -
-															// thereby the use
-															// of
-															// String.valueOf
+		return c.getStringValue(this);
 	}
 
 	public String getStringValue(String key) {

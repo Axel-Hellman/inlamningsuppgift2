@@ -8,6 +8,6 @@ public interface Cell {
 
 	public double getValue(Environment env);
 
-	public String getComment();
-
+	public String getStringValue(Environment env);
+	
 }

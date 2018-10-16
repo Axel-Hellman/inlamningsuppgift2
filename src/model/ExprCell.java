@@ -16,8 +16,8 @@ public class ExprCell implements Cell {
 		return expr.value(env);
 	}
 
-	public String getComment(){
-		return null;
+	public String getStringValue(Environment env){
+		return Double.toString(getValue(env));
 	}
 
 	@Override
