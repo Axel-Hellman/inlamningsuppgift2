@@ -6,8 +6,9 @@ import javax.swing.JMenuItem;
 import model.Sheet;
 
 class ClearAllMenuItem extends JMenuItem implements ActionListener {
-	private Sheet sheet;
-	
+
+    private Sheet sheet;
+
     public ClearAllMenuItem(Sheet sheet) {
         super("Clear all");
         this.sheet = sheet;
