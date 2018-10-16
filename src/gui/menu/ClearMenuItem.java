@@ -8,8 +8,8 @@ import gui.CurrentCell;
 import model.Sheet;
 
 class ClearMenuItem extends JMenuItem implements ActionListener {
-		private Sheet sheet;//comment
-		
+
+	private Sheet sheet;	
 	private CurrentCell currentCell;
 	
     public ClearMenuItem(CurrentCell currentCell, Sheet sheet) {
