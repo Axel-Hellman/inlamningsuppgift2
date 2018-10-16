@@ -15,7 +15,6 @@ public class XLBufferedReader extends BufferedReader {
     public XLBufferedReader(String name) throws FileNotFoundException {
         super(new FileReader(name));
     }
-
     // TODO Change Object to something appropriate
     public void load(Map<String, Cell> map) {
         try {
