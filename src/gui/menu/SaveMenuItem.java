@@ -3,7 +3,6 @@ package gui.menu;
 import gui.StatusLabel;
 import gui.XL;
 import model.Sheet;
-import util.XLPrintStream;
 
 import java.io.FileNotFoundException;
 import javax.swing.JFileChooser;

@@ -1,10 +1,11 @@
-package util;
+package gui.menu;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Map;
 import model.Factory;
+import util.XLException;
 import model.Cell;
 
 //TODO move to another package
