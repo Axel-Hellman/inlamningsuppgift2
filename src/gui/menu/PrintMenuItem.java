@@ -27,7 +27,6 @@ class PrintMenuItem extends JMenuItem implements ActionListener {
     public void actionPerformed(ActionEvent event) {
         PrinterJob printerJob = PrinterJob.getPrinterJob();
         printerJob.setPrintable(xl);
-        // printJob.pageDialog(printJob.defaultPage());
         boolean doPrint = printerJob.printDialog();
         if (doPrint) {
             try {
