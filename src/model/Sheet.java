@@ -52,7 +52,7 @@ public class Sheet extends Observable implements Environment {
 		return c.getStringValue(this);
 	}
 
-	public String getStringValue(String key) {
+	public String getString(String key) {
 		Cell c = getCell(key);
 		if (c == null) {
 			return "";
