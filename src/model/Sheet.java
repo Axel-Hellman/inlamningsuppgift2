@@ -64,10 +64,6 @@ public class Sheet extends Observable implements Environment {
         updateSheet();
     }
 
-    public Set<Entry<String, Cell>> EntrySet() {
-        return sheet.entrySet();
-    }
-
     public int size() {
         return sheet.size();
     }
