@@ -22,5 +22,10 @@ public class Bomb implements Cell {
 		throw new XLException("KABOOM! (Bomb Error)");
 	}
 
+	@Override
+	public String savedToString() {
+		return null;
+	}
+
 }
  

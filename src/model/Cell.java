@@ -10,5 +10,7 @@ public interface Cell {
 	public String getComment();
 	
 	public String toString(Environment env);
+
+	String savedToString();
 	
 }

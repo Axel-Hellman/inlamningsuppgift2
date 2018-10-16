@@ -23,5 +23,9 @@ public class ExprCell implements Cell {
 	public String toString(Environment e){
 		return expr.toString();
 	}
+	@Override
+	public String savedToString() {
+		return null;
+	}
 
 }
