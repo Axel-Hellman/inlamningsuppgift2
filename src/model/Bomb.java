@@ -18,12 +18,7 @@ public class Bomb implements Cell {
 	}
 
 	@Override
-	public String toString(Environment env) {
-		throw new XLException("KABOOM! (Bomb Error)");
-	}
-
-	@Override
-	public String savedToString() {
+	public String toString() {
 		return null;
 	}
 

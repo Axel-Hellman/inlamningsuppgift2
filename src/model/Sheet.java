@@ -64,7 +64,7 @@ public class Sheet extends Observable implements Environment {
 		if (c == null) {
 			return "";
 		}
-		return c.toString(this);
+		return c.toString();
 	}
 
 	public void put(String string, Cell cell) {
