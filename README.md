@@ -17,9 +17,9 @@ Axel Hellman (dic15ahe)
 
 Arbetat tid
 Axel: 16h
-Joakim: 20h
-Johannes: 17h
-Sandra: 20h
+Joakim: 21h
+Johannes: 18h
+Sandra: 21h
 
 Länkar till UML-diagram för högre upplösning:
 
