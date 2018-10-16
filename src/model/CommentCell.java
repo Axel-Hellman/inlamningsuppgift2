@@ -2,8 +2,6 @@ package model;
 
 import expr.Environment;
 
-// Done
-
 public class CommentCell implements Cell {
 	private String string;
 
@@ -25,5 +23,4 @@ public class CommentCell implements Cell {
 	public String toString() {
 		return "#" + string;
 	}
-
 }

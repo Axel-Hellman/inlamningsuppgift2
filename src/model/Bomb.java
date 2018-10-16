@@ -3,8 +3,6 @@ package model;
 import expr.Environment;
 import util.XLException;
 
-// Done
-
 public class Bomb implements Cell {
 
 	@Override
@@ -16,4 +14,3 @@ public class Bomb implements Cell {
 		return null;
 	}
 }
- 

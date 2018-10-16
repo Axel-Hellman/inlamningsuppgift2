@@ -3,8 +3,6 @@ package model;
 import expr.Environment;
 import expr.Expr;
 
-// Done
-
 public class ExprCell implements Cell {
 	private Expr expr;
 	
@@ -24,5 +22,4 @@ public class ExprCell implements Cell {
 	public String toString() {
 		return expr.toString();
 	}
-
 }
