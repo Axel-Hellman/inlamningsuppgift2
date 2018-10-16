@@ -16,10 +16,10 @@ Axel Hellman (dic15ahe)
 # Inlamningsuppgift2
 
 Arbetat tid
-Axel: 5h
-Joakim: 8h
-Johannes: 4h
-Sandra: 8h
+Axel: 16h
+Joakim: 20h
+Johannes: 17h
+Sandra: 20h
 
 Länkar till UML-diagram för högre upplösning:
 
