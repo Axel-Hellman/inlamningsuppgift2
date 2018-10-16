@@ -12,7 +12,7 @@ public class XLList extends Observable implements Iterable<XL> {
         list.add(xl);
         setChanged();
         notifyObservers();
-    }
+    }	
 
     public boolean isEmpty() {
         return list.isEmpty();
